@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+
+:root[data-theme="theme-light"] {
+    --bg: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+    --primary: #dfded9;
+    --secondary: #fa897b;
+    --tertiary: #ffdd94;
+    --on-primary: #fff;
+    --on-secondary: #222;
+    --edge: #c6c6c6;
+}
+
+:root[data-theme="theme-dark"] {
+    --bg: linear-gradient(315deg, #2a5470 0%, #333 54%);
+    --primary: #292929;
+    --secondary: #45f3ff;
+    --tertiary: #ff3c7b;
+    --on-primary: #fff;
+    --on-secondary: #222;
+    --edge: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    color: var(--on-primary);
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: var(--on-primary);
+    text-decoration: none;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 24px;
+    padding-top: 200px;
+}
+
+/* card */
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.card .lines {
+    position: absolute;
+    inset: 0;
+    background: var(--edge);
+    overflow: hidden;
+}
+
+.card .lines::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, var(--secondary), var(--secondary), var(--secondary), transparent);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.card .lines::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: var(--primary);
+}
+
+.card .imgBx {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: var(--edge);
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.card:hover .imgBx {
+    width: 250px;
+    height: 250px;
+}
+
+.card .imgBx::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, var(--tertiary), var(--tertiary), var(--tertiary), transparent);
+    animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.card .imgBx::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: var(--primary);
+}
+
+.card .imgBx img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(145px);
+}
+
+.card:hover .content .details {
+    transform: translateY(0px);
+}
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--secondary);
+    line-height: 1.2em;
+}
+
+.card:hover .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--secondary);
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: var(--on-primary);
+}
+
+.card:hover .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: var(--on-primary);
+}
+
+.card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+    font-size: 1em;
+    color: var(--secondary);
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.card .content .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: var(--on-primary);
+}
+
+.card .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card .content .details .actionBtn button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    background: var(--secondary);
+    color: var(--on-secondary);
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.card .content .details .actionBtn button:nth-child(2) {
+    background: var(--on-primary);
+}
+
+.card .content .details .actionBtn button:hover {
+    opacity: 1;
+}
