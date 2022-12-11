@@ -11,29 +11,29 @@
 
 <body>
     <!-- navbar -->
-    <div class="navbar">
-        <div>Portfolio</div>
-        <div class="navbarMenu">
-            <a href="#">Home</a>
-            <a href="#skill">Skill</a>
-            <a href="#exp">Experience</a>
-            <a href="#edu">Education</a>
-            <a href="">Blog</a>
-            <a href="">Contact</a>
+    <section class="top-nav">
+        <div>
+            <a href="#">Portfolio</a>
         </div>
-        <!-- <div class="hamburger">hamburger</div> -->
-    </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#exp">Experience</a></li>
+            <li><a href="#edu">Education</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </section>
     <!-- end navbar -->
 
     <!-- main container -->
-    <div class="container">
-
-        <!-- timeline -->
-
-        <!-- end timeline -->
-
+    <section class="container">
         <!-- profile -->
-        <div class="profile">
+        <section class="profile">
             <!-- profile card -->
             <div class="profileCard">
                 <div class="lines"></div>
@@ -60,11 +60,11 @@
                 working and I was over the moon when I developed myself more than
                 ever.
             </span>
-        </div>
+        </section>
         <!-- end profile -->
 
         <!-- skill container -->
-        <div id="skill" class="skill">
+        <section id="skill" class="skill">
             <div class="skillContainer">
                 <div class="card">
                     <div class="imgbx">
@@ -120,11 +120,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- end skill container -->
 
         <!-- experience -->
-        <div id="exp" class="timelineContainer">
+        <section id="exp" class="timelineContainer">
             <div class="top-section">
                 <h1>My Experiences</h1>
             </div>
@@ -190,11 +190,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- end experience -->
 
         <!-- education -->
-        <div id="edu" class="educationContainer">
+        <section id="edu" class="educationContainer">
             <div class="top-section">
                 <h1>My Educations</h1>
             </div>
@@ -260,9 +260,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- end education -->
-    </div>
+    </section>
     <!-- end main container -->
 </body>
 <script src="./index.js"></script>
