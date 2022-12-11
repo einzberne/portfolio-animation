@@ -11,29 +11,29 @@
 
 <body>
     <!-- navbar -->
-    <div class="navbar">
-        <div>Portfolio</div>
-        <div class="navbarMenu">
-            <a href="#">Home</a>
-            <a href="#skill">Skill</a>
-            <a href="#exp">Experience</a>
-            <a href="#edu">Education</a>
-            <a href="">Blog</a>
-            <a href="">Contact</a>
+    <section class="top-nav">
+        <div>
+            <a href="#">Portfolio</a>
         </div>
-        <!-- <div class="hamburger">hamburger</div> -->
-    </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#exp">Experience</a></li>
+            <li><a href="#edu">Education</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </section>
     <!-- end navbar -->
 
     <!-- main container -->
-    <div class="container">
-
-        <!-- timeline -->
-
-        <!-- end timeline -->
-
+    <section class="container">
         <!-- profile -->
-        <div class="profile">
+        <section class="profile">
             <!-- profile card -->
             <div class="profileCard">
                 <div class="lines"></div>
@@ -60,11 +60,11 @@
                 working and I was over the moon when I developed myself more than
                 ever.
             </span>
-        </div>
+        </section>
         <!-- end profile -->
 
         <!-- skill container -->
-        <div id="skill" class="skill">
+        <section id="skill" class="skill">
             <div class="skillContainer">
                 <div class="card">
                     <div class="imgbx">
@@ -120,11 +120,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- end skill container -->
 
         <!-- experience -->
-        <div id="exp" class="timelineContainer">
+        <section id="exp" class="timelineContainer">
             <div class="top-section">
                 <h1>My Experiences</h1>
             </div>
@@ -190,11 +190,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- end experience -->
 
         <!-- education -->
-        <div id="edu" class="educationContainer">
+        <section id="edu" class="educationContainer">
             <div class="top-section">
                 <h1>My Educations</h1>
             </div>
@@ -260,9 +260,48 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- end education -->
-    </div>
+
+        <!-- blog -->
+        <section id="blog" class="blog">
+            <h1>Blog</h1>
+            <div class="cardContainer">
+                <a class="card" target="_blank"
+                    href="https://medium.com/@einzberne/docker-%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-0-docker-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B8%97%E0%B8%B3%E0%B9%84%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87-docker-a0fd9084e40d">
+                    <img src="/asset/img/blog/docker.jpg" alt="">
+                    <div class="content">
+                        <p>Docker ตอนที่ 0 Docker คืออะไร ทำไมต้องใช้ Docker?</p>
+                    </div>
+                </a>
+                <a class="card" target="_blank" href="https://medium.com/@einzberne/docker-%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-1-%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-docker-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-2df10d556cb6">
+                    <img src="/asset/img/blog/docker.jpg" alt="">
+                    <div class="content">
+                        <p>Docker ตอนที่ 1 มาเริ่มใช้งาน Docker กันเถอะ</p>
+                    </div>
+                </a>
+                <a class="card" target="_blank" href="https://medium.com/@einzberne/kubernetes-in-a-nutshell-d02c9e0ade74">
+                    <img src="/asset/img/blog/kubernetes.png" alt="">
+                    <div class="content">
+                        <p>Kubernetes in a nutshell</p>
+                    </div>
+                </a>
+                <a class="card" target="_blank" href="https://medium.com/@einzberne/%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A5%E0%B8%B7%E0%B8%A1-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%97%E0%B8%B3-sercvice-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99-npm-package-cb91731432e8">
+                    <img src="/asset/img/blog/npm.png" alt="">
+                    <div class="content">
+                        <p>[กันลืม] วิธีทำ Sercvice ให้เป็น npm package</p>
+                    </div>
+                </a>
+                <a class="card" target="_blank" href="https://medium.com/@einzberne/how-to-use-multiple-gits-on-a-machine-61dc247ad64f">
+                    <img src="/asset/img/blog/github.jpg" alt="">
+                    <div class="content">
+                        <p>How to use multiple gits on a machine</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- end blog -->
+    </section>
     <!-- end main container -->
 </body>
 <script src="./index.js"></script>
